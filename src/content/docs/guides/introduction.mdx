@@ -1,0 +1,28 @@
+---
+title: はじめに
+description: このサイトについて
+sidebar:
+  label: はじめに
+  order: 0
+---
+
+このサイトは、 <a href="https://github.com/connect0459" target="_blank">connect0459</a> によって作成され、運用されています。研究室で扱う知識を体系的に習得すること、そして情報の集約を目的としています。
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 次のステップ
+
+<CardGrid stagger>
+  <Card title="ガイドラインを読む" icon="warning">
+    初めて訪れる方は、ガイドラインに必ず目を通してください。
+  </Card>
+	<Card title="開発環境の構築" icon="linux">
+		Windows PC上に開発環境を構築しましょう。
+	</Card>
+	<Card title="ドキュメントを読む" icon="document">
+		Web開発に必要な知識を学びましょう。ドキュメントは随時追加していきます。
+	</Card>
+  <Card title="キーワードで検索する" icon="magnifier">
+    Starlightベースの本サイトでは、サイト内検索をサポートしています。
+  </Card>
+</CardGrid>
