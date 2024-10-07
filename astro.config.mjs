@@ -13,7 +13,8 @@ export default defineConfig({
        */
       title: "Met Docs",
       lastUpdated: true,
-      favicon: "/icons/favicon.ico",
+      // favicon: "/icons/favicon.ico",
+      favicon: "/favicon.svg",
       head: [
         // webmanifest
         {
