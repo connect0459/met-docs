@@ -34,7 +34,7 @@ uvは、Astral社が開発した新しいPythonツールで、以下の特徴が
 1. PowerShellを管理者権限で開きます。
 2. 以下のコマンドをコピーしてPowerShellに貼り付け、Enterキーを押します：
 
-   ```powershell
+   ```bash
    powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
    ```
 
