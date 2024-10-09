@@ -3,7 +3,7 @@ title: Gitのセットアップ
 description: Gitのセットアップ
 sidebar:
   label: Git
-  order: 7
+  order: 4
 ---
 
 以下は、WSL内にGitをセットアップする手順です。研究でGitを使用することはないと思いますが、興味のある人向けに記述しています。

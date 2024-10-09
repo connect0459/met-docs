@@ -3,7 +3,7 @@ title: VS Codeのセットアップ
 description: Visual Studio Codeのセットアップ
 sidebar:
   label: Visual Studio Code
-  order: 2
+  order: 3
 ---
 
 Windows上にVisual Studio Code (VS Code) をセットアップする方法は以下の通りです。

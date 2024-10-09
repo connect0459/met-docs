@@ -4,7 +4,7 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://connect0459.github.io',
-  base: 'met-docs',
+  base: 'met-docs', // GitHub Pagesにデプロイするときのみコメントアウト
   integrations: [
     starlight({
       /**

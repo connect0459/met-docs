@@ -6,15 +6,12 @@ sidebar:
   order: 0
 ---
 
-情報システムチームでは、プログラムを新たに作成したり、既に作られたプログラムをメンテナンスしながらシステム運用を行っています。
+プログラムを新たに作成したり、既に作られたプログラムをメンテナンスしながら研究しています。
 そのために必要なソフトウェアをインストールする手順を紹介していきます。
 
 ## インストールするもの
 
-1. [WSL](../setup-wsl/)
-2. [Visual Studio Code](../setup-vscode/)
-3. [Docker](../setup-docker/)
-4. [Node.js](../setup-nodejs/)
-5. [PHP](../setup-php/)
-6. [Go](../setup-go/)
-7. [Git](../setup-git/)
+1. [WinSCP](../setup-winscp/)
+2. [WSL](../setup-wsl/)
+3. [Visual Studio Code](../setup-vscode/)
+4. [Git](../setup-git/)

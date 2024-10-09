@@ -3,7 +3,7 @@ title: WSL2のセットアップ
 description: Windows Subsystem for Linuxのセットアップ
 sidebar:
   label: WSL
-  order: 1
+  order: 2
 ---
 
 WSL2 (Windows Subsystem for Linux 2) を Windows PCにセットアップし、Ubuntu 24.04 LTSを使用する手順は以下の通りです。
