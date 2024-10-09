@@ -8,6 +8,8 @@ sidebar:
 
 WSL2 (Windows Subsystem for Linux 2) を Windows PCにセットアップし、Ubuntu 24.04 LTSを使用する手順は以下の通りです。
 
+※この記事はLinux環境を使用したい方向けに紹介しています。Windows上で環境を構築したい場合は本手順を飛ばして次に進んでください。
+
 ## 手順
 
 ### 1. Windowsの更新
