@@ -18,12 +18,12 @@ sidebar:
 
 ### 1. プロジェクト情報の確認と編集
 
-`pyproject.toml`ファイルを開き、必要な情報が正しく記載されているか確認します。特に、デプロイにはバージョン情報（`0.1.4`など）が必要ですので、セマンティックバージョニングに基づいてバージョンアップしてください。
+`pyproject.toml`ファイルを開き、必要な情報が正しく記載されているか確認します。特に、デプロイにはバージョン情報（`0.1.0`など）が必要ですので、セマンティックバージョニングに基づいてバージョンアップしてください。
 
 ```toml
 [project]
 name = "your-package-name"
-version = "0.1.4"
+version = "0.1.0"
 description = "A brief description of your package"
 authors = [
   {name = "Your Name", email = "your.email@example.com"},
@@ -51,7 +51,7 @@ __all__ = [
     "EddyDataPreprocessor",
 ]
 
-__version__ = "0.1.4"
+__version__ = "0.1.0"
 ```
 
 ### 2. READMEファイルの作成
