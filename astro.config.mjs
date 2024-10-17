@@ -80,6 +80,10 @@ export default defineConfig({
           autogenerate: { directory: "python" },
         },
         {
+          label: "PyPI",
+          autogenerate: { directory: "pypi" },
+        },
+        {
           label: "SSH",
           autogenerate: { directory: "secure-shell" },
         },
