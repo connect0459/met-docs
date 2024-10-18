@@ -25,7 +25,7 @@ cd file_handler_package
 必要なパッケージをインストールします。
 
 ```bash
-
+uv add --dev hatching pytest
 ```
 
 ## 2. 仮想環境の作成
@@ -84,6 +84,13 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/file_handler"]
+
+
+[tool.uv]
+dev-dependencies = [
+  "hatching>=0.0.1",
+  "pytest>=8.3.3",
+]
 ```
 
 ## 5. パッケージコードの作成
@@ -164,15 +171,7 @@ def test_read_nonexistent_file():
     assert "Error: File 'nonexistent.txt' not found." in handler.read_file()
 ```
 
-## 7. 依存関係のインストール
-
-テスト用の依存関係をインストールします：
-
-```bash
-uv add --dev pytest
-```
-
-## 8. テストの実行
+## 7. テストの実行
 
 テストを実行して、パッケージが正しく動作することを確認します：
 
@@ -180,7 +179,7 @@ uv add --dev pytest
 pytest
 ```
 
-## 9. パッケージのビルド
+## 8. パッケージのビルド
 
 パッケージをビルドします：
 
@@ -190,7 +189,7 @@ uv run hatchling build
 
 これにより、`dist/`ディレクトリにパッケージのdistributionファイルが作成されます。
 
-## 10. ローカルでのインストールテスト
+## 9. ローカルでのインストールテスト
 
 作成したパッケージをローカルでインストールしてテストします：
 
