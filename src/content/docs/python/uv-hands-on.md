@@ -35,6 +35,10 @@ uv python pin 3.11
 uv sync
 ```
 
+プロジェクトルートに`.venv`ディレクトリが作成されました。`.venv/bin`にはPythonや仮想環境の実行ファイルが、`.venv/lib`にはインストールしたパッケージの実体などが入ります。
+
+ここから、実際に使用するパッケージをインストールしていきます。
+
 ## 4. パッケージのインストール
 
 例として、データ分析によく使われる`pandas`をインストールしてみましょう。
@@ -43,12 +47,40 @@ uv sync
 uv add pandas
 ```
 
+`.venv/lib/python3.11/site-packages`配下に、pandasやその依存関係であるnumpyなどが追加されます。
+
 ## 5. 開発ツールのインストール
 
-Pythonのコードフォーマッターである`ruff`をインストールします。
+Pythonのコードフォーマッターであるruffをインストールします。
 
 ```bash
 uv tool install ruff
+```
+
+ruffを実行する際は、次のコマンドを実行します。
+
+```bash
+ruff check
+```
+
+記法に問題がなかった場合、以下のようなログが出ます。
+
+```bash
+All checks passed!
+```
+
+一方で、誤った記法のファイルがあった場合、エラーログが表示されます。以下は`hello.py`に`wrong_notation`という、初期化子を設定していない変数を記述した際のエラーです。
+
+```bash
+hello.py:8:18: SyntaxError: Expected an expression
+  |
+6 |     main()
+7 | 
+8 | wrong_notation = 
+  |                  ^
+  |
+
+Found 1 error.
 ```
 
 ## 6. Pythonファイルの作成と編集
