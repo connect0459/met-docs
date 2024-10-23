@@ -27,6 +27,14 @@ cd uv-hands-on
 uv python pin 3.11
 ```
 
+下記のようなエラーが出た場合は、`pyproject.toml`の`requires-python`を`>= 3.11`に修正して保存してください。
+
+```txt
+error: The requested Python version `3.11` is incompatible with the project `requires-python` value of `>=3.12`.
+```
+
+保存後に再度バージョン指定を行うと、`.python-version`が正常に更新されます。
+
 ## 3. 環境のセットアップ
 
 指定したPythonバージョンをインストールし、仮想環境をセットアップします。
