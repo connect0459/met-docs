@@ -58,11 +58,13 @@ uv環境が必要でない人に向けて、uvのアンインストール方法�
 ### macOS または Linux
 
 ```bash
-# ホームディレクトリの.uvディレクトリを削除
-rm -rf ~/.uv
+sudo rm ~/.cargo/bin/uv
+```
 
-# パスがデフォルトの場合、実行ファイルを削除
-sudo rm /usr/local/bin/uv
+上記のパスにuvがなかった場合は、以下のコマンドを実行してuvの実行ファイルのパスを検索します。
+
+```bash
+which uv
 ```
 
 ### Windows
@@ -71,11 +73,17 @@ sudo rm /usr/local/bin/uv
 # ユーザーフォルダの.uvディレクトリを削除
 rmdir /s /q %LOCALAPPDATA%\uv
 
-# パスがデフォルトの場合、実行ファイルを削除
-del %LOCALAPPDATA%\Microsoft\WindowsApps\uv.exe
+# 実行ファイルを削除
+del %USERPROFILE%\.cargo\bin\uv.exe
 ```
 
-注意点：
+上記のパスにuvがなかった場合は、以下のコマンドを実行してuvの実行ファイルのパスを検索します。
+
+```bash
+where.exe uv
+```
+
+### 注意点
 
 1. uvをインストールした方法によって、実行ファイルの場所が異なる場合があります
 2. 環境変数のPATHに追加した設定がある場合は、それも削除する必要があります
