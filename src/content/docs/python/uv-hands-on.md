@@ -65,13 +65,13 @@ ruff check
 
 プロジェクトの`.py`ファイルの記法に問題がなかった場合、以下のようなログが出ます。
 
-```bash
+```txt
 All checks passed!
 ```
 
 一方で、誤った記法のファイルがあった場合、エラーログが表示されます。以下は`hello.py`に、初期化子を設定していない変数`wrong_notation`を記述した際のエラーです。
 
-```bash
+```txt
 hello.py:8:18: SyntaxError: Expected an expression
   |
 6 |     main()
@@ -151,13 +151,16 @@ uv tree
 [project]
 name = "uv-hands-on"
 version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
 dependencies = [
-  "pandas",
+  "pandas>=2.2.3",
 ]
 
 [tool.uv]
 dev-dependencies = [
-  "ruff>=0.6.8",
+  "ruff>=0.7.0",
 ]
 ```
 
