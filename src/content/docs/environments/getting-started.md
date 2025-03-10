@@ -14,4 +14,5 @@ sidebar:
 1. [WinSCP](../setup-winscp/)
 2. [WSL](../setup-wsl/)
 3. [Visual Studio Code](../setup-vscode/)
-4. [Git](../setup-git/)
+4. [uv](../setup-uv/)
+5. [Git](../setup-git/)
