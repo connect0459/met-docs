@@ -3,8 +3,8 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://connect0459.github.io',
-  base: 'met-docs', // GitHub Pagesにデプロイするときのみコメントアウト
+  site: "https://connect0459.github.io",
+  base: "met-docs", // GitHub Pagesにデプロイするときのみコメントアウト
   integrations: [
     starlight({
       /**
@@ -16,6 +16,24 @@ export default defineConfig({
       // favicon: "/icons/favicon.ico",
       favicon: "/favicon.svg",
       head: [
+        // Google Analytics 4
+        // GitHub Actions の Secrets に設定した値を使用
+        {
+          tag: "script",
+          attrs: {
+            src: `https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA4_ID}`,
+            async: true,
+          },
+        },
+        {
+          tag: "script",
+          content: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${import.meta.env.PUBLIC_GA4_ID}');
+          `,
+        },
         // webmanifest
         {
           tag: "link",
@@ -63,9 +81,13 @@ export default defineConfig({
           lang: "ja",
         },
       },
-      social: {
-        github: "https://github.com/connect0459",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/connect0459",
+        },
+      ],
       sidebar: [
         {
           label: "ガイド",
