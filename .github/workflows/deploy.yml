@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Read .nvmrc
         id: nvmrc
-        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+        run: echo "NODE_VERSION=$(tr -d '[:space:]' < .nvmrc)" >> $GITHUB_OUTPUT
       - name: Install, build, and upload your site
         uses: withastro/action@b7d53628f8b666036b0238aadb0b984a2a489f26 # v6.1.1
         with:
