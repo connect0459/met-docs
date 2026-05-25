@@ -91,23 +91,23 @@ export default defineConfig({
       sidebar: [
         {
           label: "ガイド",
-          autogenerate: { directory: "guides" },
+          items: [{ autogenerate: { directory: "guides" } }],
         },
         {
           label: "開発環境",
-          autogenerate: { directory: "environments" },
+          items: [{ autogenerate: { directory: "environments" } }],
         },
         {
           label: "Python",
-          autogenerate: { directory: "python" },
+          items: [{ autogenerate: { directory: "python" } }],
         },
         {
           label: "PyPI",
-          autogenerate: { directory: "pypi" },
+          items: [{ autogenerate: { directory: "pypi" } }],
         },
         {
           label: "SSH",
-          autogenerate: { directory: "secure-shell" },
+          items: [{ autogenerate: { directory: "secure-shell" } }],
         },
       ],
     }),
