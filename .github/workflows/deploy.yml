@@ -17,12 +17,11 @@ jobs:
       PUBLIC_GA4_ID: ${{ secrets.PUBLIC_GA4_ID }}
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Install, build, and upload your site
-        uses: withastro/action@v4
+        uses: withastro/action@b7d53628f8b666036b0238aadb0b984a2a489f26 # v6.1.1
         with:
-          node-version: 22
-          package-manager: npm@latest
+          node-version: .nvmrc
 
   deploy:
     needs: build
@@ -33,4 +32,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
