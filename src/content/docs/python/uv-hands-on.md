@@ -17,7 +17,7 @@ uv init uv-hands-on
 cd uv-hands-on
 ```
 
-これにより、`uv-hands-on`というディレクトリが作成され、その中に移動します。
+これにより、 `uv-hands-on` というディレクトリが作成され、その中に移動します。
 
 ## 2. Pythonバージョンの指定
 
@@ -27,7 +27,7 @@ cd uv-hands-on
 uv python pin 3.11
 ```
 
-下記のようなエラーが出た場合は、`pyproject.toml`の`requires-python`を`>= 3.11`に修正して保存してください。
+下記のようなエラーが出た場合は、 `pyproject.toml` の `requires-python` を `>= 3.11` に修正して保存してください。
 
 ```txt
 error: The requested Python version `3.11` is incompatible with the project `requires-python` value of `>=3.12`.
@@ -43,19 +43,19 @@ error: The requested Python version `3.11` is incompatible with the project `req
 uv sync
 ```
 
-プロジェクトルートに`.venv`ディレクトリが作成されました。`.venv/bin`にはPythonや仮想環境の実行ファイルが、`.venv/lib`にはインストールしたパッケージの実体などが入ります。
+プロジェクトルートに `.venv` ディレクトリが作成されました。 `.venv/bin` にはPythonや仮想環境の実行ファイルが、 `.venv/lib` にはインストールしたパッケージの実体などが入ります。
 
 ここから、実際に使用するパッケージをインストールしていきます。
 
 ## 4. パッケージのインストール
 
-例として、データ分析によく使われる`pandas`をインストールしてみましょう。
+例として、データ分析によく使われる `pandas` をインストールしてみましょう。
 
 ```bash
 uv add pandas
 ```
 
-`.venv/lib/python3.11/site-packages`配下に、pandasやその依存関係であるnumpyなどが追加されます。
+`.venv/lib/python3.11/site-packages` 配下に、pandasやその依存関係であるnumpyなどが追加されます。
 
 ## 5. 開発ツールのインストール
 
@@ -77,7 +77,7 @@ ruff check
 All checks passed!
 ```
 
-一方で、誤った記法のファイルがあった場合、エラーログが表示されます。以下は`hello.py`に、初期化子を設定していない変数`wrong_notation`を記述した際のエラーです。
+一方で、誤った記法のファイルがあった場合、エラーログが表示されます。以下は `hello.py` に、初期化子を設定していない変数 `wrong_notation` を記述した際のエラーです。
 
 ```txt
 hello.py:8:18: SyntaxError: Expected an expression
@@ -127,7 +127,7 @@ uv run python sample.py
 . .venv/bin/activate
 ```
 
-これにより、プロンプトの先頭に`(.venv)`が表示されます。
+これにより、プロンプトの先頭に `(.venv)` が表示されます。
 
 仮想環境が有効化された状態で、通常のpythonコマンドを使用できます：
 
@@ -149,11 +149,11 @@ deactivate
 uv tree
 ```
 
-これにより、`pandas`とその依存パッケージが表示されます。
+これにより、 `pandas` とその依存パッケージが表示されます。
 
 ## 10. pyproject.tomlの確認
 
-エディタで`pyproject.toml`を開き、内容を確認します。`pandas`が`dependencies`に、`ruff`が`dev-dependencies`に追加されていることを確認できます。
+エディタで `pyproject.toml` を開き、内容を確認します。 `pandas` が `dependencies` に、 `ruff` が `dev-dependencies` に追加されていることを確認できます。
 
 ```toml
 [project]

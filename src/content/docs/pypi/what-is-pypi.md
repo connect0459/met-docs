@@ -36,7 +36,7 @@ PyPI（Python Package Index）は、Pythonコミュニティのための公式�
    PyPIウェブサイト（<https://pypi.org>）で検索できます。
 
 4. パッケージの公開:
-   `setuptools`や`twine`を使用して自作のパッケージを公開できます。
+   `setuptools` や `twine` を使用して自作のパッケージを公開できます。
 
 ## CondaとAnacondaとの違い
 

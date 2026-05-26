@@ -42,8 +42,8 @@ Windows上にVisual Studio Code (VS Code) をセットアップする方法は�
 
 ## 追加のヒント
 
-- UbuntuをCLI (ターミナル) で起動して、`code .`を実行するとカレントディレクトリでVS Codeを起動します。
-- `Ctrl + Shift + @`の順でキーを押し続けると、VS Code上でターミナルを起動できます。
+- UbuntuをCLI (ターミナル) で起動して、 `code .` を実行するとカレントディレクトリでVS Codeを起動します。
+- `Ctrl + Shift + @` の順でキーを押し続けると、VS Code上でターミナルを起動できます。
 
 これで、Windows上でVS Codeが使用可能になり、WSL2上のUbuntu環境と連携できるようになりました。VS Codeを使用して、Ubuntuでのファイル編集、プログラミング、デバッグなどを行うことができます。
 

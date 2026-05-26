@@ -31,11 +31,11 @@ Pythonにおけるモジュールとパッケージは、コードの再利用�
 
 ### 1. モジュールファイルの作成
 
-`file_handler.py`という名前のファイルを作成します。
+`file_handler.py` という名前のファイルを作成します。
 
 ### 2. クラスの定義
 
-`file_handler.py`に以下のコードを記述します：
+`file_handler.py` に以下のコードを記述します：
 
 ```python
 class FileHandler:
@@ -71,9 +71,9 @@ class FileHandler:
 
 このクラスは以下の機能を提供します：
 
-- ファイルの読み込み（`read_file`メソッド）
-- ファイルへの書き込み（`write_file`メソッド）
-- ファイルへの追記（`append_file`メソッド）
+- ファイルの読み込み（ `read_file` メソッド）
+- ファイルへの書き込み（ `write_file` メソッド）
+- ファイルへの追記（ `append_file` メソッド）
 
 ※このプログラムは一例です。実際にはtry-except文の用法などをプロジェクトごとに考える必要があります。
 
@@ -165,7 +165,7 @@ class FileHandler:
             return f"Error: {str(e)}"
 ```
 
-使用例（`main.py`または Jupyter Notebook）:
+使用例（ `main.py` または Jupyter Notebook）:
 
 ```python
 from file_handler import FileHandler
@@ -188,7 +188,7 @@ print(handler.read_file())
 
 ## 比較の解説
 
-1. **構造化**: モジュール版では、すべてのファイル操作が`FileHandler`クラスにカプセル化されています。これにより、コードの構造が明確になり、関連する機能がグループ化されています。
+1. **構造化**: モジュール版では、すべてのファイル操作が `FileHandler` クラスにカプセル化されています。これにより、コードの構造が明確になり、関連する機能がグループ化されています。
 
 2. **再利用性**: モジュール版は他のプロジェクトやスクリプトで簡単に再利用できます。Notebook版では、関数を再利用するには手動でコピー＆ペーストする必要があります。
 

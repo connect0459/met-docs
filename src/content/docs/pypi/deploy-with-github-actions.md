@@ -14,7 +14,7 @@ sidebar:
 
 1. GitHubアカウントとリポジトリ
 2. PyPIアカウントとAPIトークン
-3. 正しく設定されたPythonプロジェクト（`pyproject.toml`、`__init__.py`など）
+3. 正しく設定されたPythonプロジェクト（ `pyproject.toml` 、 `__init__.py` など）
 
 ## 手順
 
@@ -28,8 +28,8 @@ sidebar:
 
 ### 2. ワークフローファイルの作成
 
-1. リポジトリに`.github/workflows`ディレクトリを作成します（存在しない場合）。
-2. このディレクトリに`publish-to-pypi.yml`ファイルを作成し、以下の内容を記述します：
+1. リポジトリに `.github/workflows` ディレクトリを作成します（存在しない場合）。
+2. このディレクトリに `publish-to-pypi.yml` ファイルを作成し、以下の内容を記述します：
 
     ```yaml
     name: Publish Python Package to PyPI
@@ -86,11 +86,11 @@ sidebar:
             password: ${{ secrets.PYPI_API_TOKEN }}
     ```
 
-3. `your_package_name`を実際のパッケージ名に置き換えてください。
+3. `your_package_name` を実際のパッケージ名に置き換えてください。
 
 ### 3. バージョン情報の管理
 
-1. `pyproject.toml`ファイルにバージョン情報を記載します：
+1. `pyproject.toml` ファイルにバージョン情報を記載します：
 
    ```toml
    [project]
@@ -99,7 +99,7 @@ sidebar:
    # その他の設定...
    ```
 
-2. `src/your_package_name/__init__.py`ファイルにバージョン情報を記載します：
+2. `src/your_package_name/__init__.py` ファイルにバージョン情報を記載します：
 
    ```python
    __version__ = "0.1.0"
@@ -110,8 +110,8 @@ sidebar:
 1. プロジェクトの変更をコミットし、GitHubにプッシュします。
 2. GitHubリポジトリページで"Releases"セクションに移動します。
 3. "Create a new release"をクリックします。
-4. タグバージョンを入力します（例：`v0.1.0`）。
-   - このタグバージョンは`pyproject.toml`と`__init__.py`のバージョンと一致する必要があります。
+4. タグバージョンを入力します（例： `v0.1.0` ）。
+   - このタグバージョンは `pyproject.toml` と `__init__.py` のバージョンと一致する必要があります。
 5. リリースのタイトルと説明を入力します。
 6. "Publish release"をクリックします。
 
@@ -128,7 +128,7 @@ sidebar:
 
 ## トラブルシューティング
 
-- GitHub Actionsでバージョンの不一致エラーが発生した場合は、`pyproject.toml`、`__init__.py`、およびGitタグのバージョンが一致していることを確認してください。
+- GitHub Actionsでバージョンの不一致エラーが発生した場合は、 `pyproject.toml` 、 `__init__.py` 、およびGitタグのバージョンが一致していることを確認してください。
 - PyPIへの公開に失敗した場合は、APIトークンが正しく設定されていることを確認してください。
 - その他のエラーについては、GitHub Actionsの実行ログを確認し、エラーメッセージに基づいて対処してください。
 
