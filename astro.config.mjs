@@ -102,6 +102,10 @@ export default defineConfig({
           items: [{ autogenerate: { directory: "python" } }],
         },
         {
+          label: "設計指針",
+          items: [{ autogenerate: { directory: "design-tips" } }],
+        },
+        {
           label: "PyPI",
           items: [{ autogenerate: { directory: "pypi" } }],
         },
