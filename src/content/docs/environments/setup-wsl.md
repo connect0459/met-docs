@@ -95,5 +95,5 @@ Ubuntuを起動し、ユーザー名とパスワードを設定します。
 
 WSL2の詳細や高度な設定については、以下のMicrosoftの公式ドキュメントを参照してください:
 
-- WSL2の概要: <https://docs.microsoft.com/ja-jp/windows/wsl/about>
-- WSL2のインストール: <https://docs.microsoft.com/ja-jp/windows/wsl/install-win10>
+- WSL2の概要: <https://learn.microsoft.com/ja-jp/windows/wsl/about>
+- WSL2のインストール: <https://learn.microsoft.com/ja-jp/windows/wsl/install-win10>

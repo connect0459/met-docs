@@ -25,7 +25,7 @@ cd file_handler_package
 必要なパッケージをインストールします。
 
 ```bash
-uv add --dev hatching pytest
+uv add --dev hatchling pytest
 ```
 
 ## 2. 仮想環境の作成
@@ -88,7 +88,7 @@ packages = ["src/file_handler"]
 
 [tool.uv]
 dev-dependencies = [
-  "hatching>=0.0.1",
+  "hatchling>=0.0.1",
   "pytest>=8.3.3",
 ]
 ```

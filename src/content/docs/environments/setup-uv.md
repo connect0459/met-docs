@@ -55,10 +55,20 @@ uvは、Astral社が開発した新しいPythonツールで、以下の特徴が
 
 uv環境が必要でない人に向けて、uvのアンインストール方法を説明します。
 
-### macOS または Linux
+### 推奨：uv self uninstall コマンドを使用する
 
 ```bash
-sudo rm ~/.cargo/bin/uv
+uv self uninstall
+```
+
+このコマンドにより、uvの実行ファイルと関連ファイルが自動的に削除されます。
+
+### 手動でアンインストールする場合
+
+#### macOS または Linux
+
+```bash
+rm ~/.local/bin/uv ~/.local/bin/uvx
 ```
 
 上記のパスにuvがなかった場合は、以下のコマンドを実行してuvの実行ファイルのパスを検索します。
@@ -67,19 +77,19 @@ sudo rm ~/.cargo/bin/uv
 which uv
 ```
 
-### Windows
+#### Windows
 
 ```powershell
-# ユーザーフォルダの.uvディレクトリを削除
-rmdir /s /q %LOCALAPPDATA%\uv
-
 # 実行ファイルを削除
-del %USERPROFILE%\.cargo\bin\uv.exe
+rmdir /s /q %APPDATA%\uv\bin
+
+# キャッシュ・データディレクトリを削除
+rmdir /s /q %LOCALAPPDATA%\uv
 ```
 
 上記のパスにuvがなかった場合は、以下のコマンドを実行してuvの実行ファイルのパスを検索します。
 
-```bash
+```powershell
 where.exe uv
 ```
 

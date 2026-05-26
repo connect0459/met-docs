@@ -47,9 +47,9 @@ sidebar:
       deploy:
         runs-on: ubuntu-latest
         steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4.3.1
         - name: Set up Python
-          uses: actions/setup-python@v4
+          uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
           with:
             python-version: ${{ env.PYTHON_VERSION }}
         - name: Install dependencies
@@ -80,7 +80,7 @@ sidebar:
         - name: Build package
           run: python -m build
         - name: Publish package
-          uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+          uses: pypa/gh-action-pypi-publish@cef221092ed1bacb1cc03d23a2d87d1d172e277b  # v1.14.0
           with:
             user: __token__
             password: ${{ secrets.PYPI_API_TOKEN }}

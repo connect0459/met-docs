@@ -62,13 +62,13 @@ uv add pandas
 Pythonのコードフォーマッターであるruffをインストールします。
 
 ```bash
-uv tool install ruff
+uv add --dev ruff
 ```
 
 ruffを実行する際は、次のコマンドを実行します。
 
 ```bash
-ruff check
+uv run ruff check
 ```
 
 プロジェクトの`.py`ファイルの記法に問題がなかった場合、以下のようなログが出ます。
@@ -166,8 +166,8 @@ dependencies = [
   "pandas>=2.2.3",
 ]
 
-[tool.uv]
-dev-dependencies = [
+[dependency-groups]
+dev = [
   "ruff>=0.7.0",
 ]
 ```

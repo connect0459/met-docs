@@ -87,22 +87,22 @@ uv tree
 
 ## 開発ツールのインストール
 
-開発環境でのみ使用するツール（Linter、Formatter等）は、 `pyproject.toml` の `[tool.uv].dev-dependencies` セクションに記述します。これにより、Pythonパッケージを配布する際に不要なパッケージを除外できます。
+開発環境でのみ使用するツール（Linter、Formatter等）は、 `pyproject.toml` の `[dependency-groups]` セクションに記述します。これにより、Pythonパッケージを配布する際に不要なパッケージを除外できます。
 
 ```bash
-uv tool install [ツール名]
+uv add --dev [ツール名]
 ```
 
 例：Ruff（PythonのLinter/Formatter）のインストール
 
 ```bash
-uv tool install ruff
+uv add --dev ruff
 ```
 
 このコマンドにより：
 
 1. Ruffがインストールされます。
-2. `pyproject.toml` の `[tool.uv].dev-dependencies` セクションにRuffが追加されます。
+2. `pyproject.toml` の `[dependency-groups].dev` セクションにRuffが追加されます。
 
 ## コードの実行
 
