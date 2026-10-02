@@ -1,6 +1,26 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
+const ga4Id = process.env.PUBLIC_GA4_ID?.trim();
+const ga4Head = ga4Id
+  ? [
+      {
+        tag: "script",
+        attrs: {
+          src: `https://www.googletagmanager.com/gtag/js?id=${ga4Id}`,
+          async: true,
+        },
+      },
+      {
+        tag: "script",
+        content: `window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', ${JSON.stringify(ga4Id)});`,
+      },
+    ]
+  : [];
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://connect0459.github.io",
@@ -16,24 +36,7 @@ export default defineConfig({
       // favicon: "/icons/favicon.ico",
       favicon: "/favicon.svg",
       head: [
-        // Google Analytics 4
-        // GitHub Actions の Secrets に設定した値を使用
-        {
-          tag: "script",
-          attrs: {
-            src: `https://www.googletagmanager.com/gtag/js?id=${import.meta.env.PUBLIC_GA4_ID}`,
-            async: true,
-          },
-        },
-        {
-          tag: "script",
-          content: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${import.meta.env.PUBLIC_GA4_ID}');
-          `,
-        },
+        ...ga4Head,
         // webmanifest
         {
           tag: "link",
